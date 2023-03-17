@@ -1,0 +1,34 @@
+{
+	"name": "micropackage/models",
+	"description": "Models",
+	"license": "GPL-3.0-or-later",
+	"require": {
+		"php": ">=8.0",
+		"illuminate/support": "^10.3",
+		"micropackage/dochooks": "^1.1"
+	},
+	"require-dev": {
+		"phpstan/phpstan": "^1.9",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+		"pestphp/pest": "^1.22",
+		"szepeviktor/phpcs-psr-12-neutron-hybrid-ruleset": "^0.6.1",
+		"szepeviktor/phpstan-wordpress": "^1.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"Micropackage\\Models\\": "src/"
+		}
+	},
+	"scripts": {
+		"phpcs": "phpcs",
+		"phpcbf": "phpcbf",
+		"phpstan": "phpstan analyze",
+		"pest":  "pest"
+	},
+	"config": {
+		"allow-plugins": {
+			"pestphp/pest-plugin": true,
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}
