@@ -50,32 +50,32 @@ abstract class Taxonomy extends Model
 	{
 		return [
 			/* translators: %s is a taxonomy name. */
-			'add_or_remove_items' => sprintf(__('Add or remove %s', 'micropackage-wp-objects'), '{pluralLower}'),
+			'add_or_remove_items' => sprintf(__('Add or remove %s', 'micropackage-models'), '{pluralLower}'),
 			/* translators: %s is a taxonomy name. */
-			'back_to_items' => sprintf(__('Go to %s', 'micropackage-wp-objects'), '{plural}'),
+			'back_to_items' => sprintf(__('Go to %s', 'micropackage-models'), '{plural}'),
 			'choose_from_most_used' => sprintf(
 				/* translators: %s is a taxonomy name. */
-				__('Choose from the most used %s', 'micropackage-wp-objects'),
+				__('Choose from the most used %s', 'micropackage-models'),
 				'{pluralLower}'
 			),
 			/* translators: %s is a taxonomy name. */
-			'filter_by_item' => sprintf(__('Filter by %s', 'micropackage-wp-objects'), '{singularLower}'),
-			'most_used' => __('Most Used', 'micropackage-wp-objects'),
+			'filter_by_item' => sprintf(__('Filter by %s', 'micropackage-models'), '{singularLower}'),
+			'most_used' => __('Most Used', 'micropackage-models'),
 			/* translators: %s is a taxonomy name. */
-			'new_item_name' => sprintf(__('New %s Name', 'micropackage-wp-objects'), '{singular}'),
+			'new_item_name' => sprintf(__('New %s Name', 'micropackage-models'), '{singular}'),
 			/* translators: %s is a taxonomy name. */
-			'no_terms' => sprintf(__('No %s', 'micropackage-wp-objects'), '{pluralLower}'),
+			'no_terms' => sprintf(__('No %s', 'micropackage-models'), '{pluralLower}'),
 			/* translators: %s is a taxonomy name. */
-			'parent_item' => sprintf(__('Parent %s', 'micropackage-wp-objects'), '{singular}'),
+			'parent_item' => sprintf(__('Parent %s', 'micropackage-models'), '{singular}'),
 			/* translators: %s is a taxonomy name. */
-			'popular_items' => sprintf(__('Popular %s', 'micropackage-wp-objects'), '{plural}'),
+			'popular_items' => sprintf(__('Popular %s', 'micropackage-models'), '{plural}'),
 			'separate_items_with_commas' => sprintf(
 				/* translators: %s is a taxonomy name. */
-				__('Separate %s with commas', 'micropackage-wp-objects'),
+				__('Separate %s with commas', 'micropackage-models'),
 				'{pluralLower}'
 			),
 			/* translators: %s is a taxonomy name. */
-			'update_item' => sprintf(__('Update %s', 'micropackage-wp-objects'), '{singular}'),
+			'update_item' => sprintf(__('Update %s', 'micropackage-models'), '{singular}'),
 		];
 	}
 
