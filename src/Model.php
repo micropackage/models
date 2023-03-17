@@ -1,4 +1,9 @@
 <?php
+/**
+ * Abstract class defining base model methods.
+ *
+ * @package micropackage/models
+ */
 
 declare(strict_types=1);
 
@@ -30,15 +35,21 @@ abstract class Model
 	public static function getSlug(): string
 	{
 		/** @var string */
-		return self::remember('slug', static function(): string {
-			return Str::of(static::class)
-				->when(static::$suffix, function(Stringable $slug, string $suffix) {
-					return $slug->replaceMatches("/{$suffix}$/", '');
-				})
+		return self::remember(
+			'slug',
+			static function (): string {
+				return Str::of(static::class)
+				->when(
+					static::$suffix,
+					static function (Stringable $slug, string $suffix) {
+						return $slug->replaceMatches("/{$suffix}$/", '');
+					}
+				)
 				->classBasename()
 				->kebab()
 				->value();
-		});
+			}
+		);
 	}
 
 	/**
@@ -49,13 +60,16 @@ abstract class Model
 	public static function getName(): string
 	{
 		/** @var string */
-		return self::remember('name', static function(): string {
-			return Str::of(static::getSlug())
+		return self::remember(
+			'name',
+			static function (): string {
+				return Str::of(static::getSlug())
 				->replace('-', ' ')
 				->title()
 				->singular()
 				->value();
-		});
+			}
+		);
 	}
 
 	/**
@@ -66,11 +80,14 @@ abstract class Model
 	public static function getPluralName(): string
 	{
 		/** @var string */
-		return self::remember('pluralName', static function(): string {
-			return Str::of(static::getName())
+		return self::remember(
+			'pluralName',
+			static function (): string {
+				return Str::of(static::getName())
 				->plural()
 				->value();
-		});
+			}
+		);
 	}
 
 	/**
@@ -88,8 +105,8 @@ abstract class Model
 				'all_items' => sprintf(__('All %s', 'micropackage-wp-objects'), '{plural}'),
 				/* translators: %s is a post type or taxonomy name. */
 				'edit_item' => sprintf(__('Edit %s', 'micropackage-wp-objects'), '{singular}'),
-				/* translators: %s is a post type or taxonomy name. */
 				'item_link' => sprintf(
+					/* translators: %s is a post type or taxonomy name. */
 					_x('%s Link', 'navigation link block title', 'micropackage-wp-objects'),
 					'{singular}'
 				),

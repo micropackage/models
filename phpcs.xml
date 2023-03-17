@@ -18,6 +18,7 @@
 		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
 
 		<exclude name="NeutronStandard.Functions.LongFunction.LongFunction"/>
+		<exclude name="SlevomatCodingStandard.Functions.DisallowArrowFunction.DisallowedArrowFunction"/>
 		<exclude name="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterOpen"/>
 		<exclude name="NeutronStandard.MagicMethods.DisallowMagicGet.MagicGet"/>
 

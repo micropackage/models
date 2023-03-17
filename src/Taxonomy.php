@@ -1,4 +1,9 @@
 <?php
+/**
+ * Abstract class of taxonomy model.
+ *
+ * @package micropackage/models
+ */
 
 declare(strict_types=1);
 

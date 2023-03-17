@@ -1,4 +1,9 @@
 <?php
+/**
+ * Abstract class of post type model.
+ *
+ * @package micropackage/models
+ */
 
 declare(strict_types=1);
 
@@ -39,8 +44,8 @@ abstract class PostType extends Model
 			'insert_into_item' => sprintf(__('Insert into %s', 'micropackage-wp-objects'), '{singularLower}'),
 			/* translators: %s is a post type name. */
 			'item_published' => sprintf(__('%s published.', 'micropackage-wp-objects'), '{singular}'),
-			/* translators: %s is a post type name. */
 			'item_published_privately' => sprintf(
+				/* translators: %s is a post type name. */
 				__('%s published privately.', 'micropackage-wp-objects'),
 				'{singular}'
 			),
