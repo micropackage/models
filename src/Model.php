@@ -28,6 +28,14 @@ abstract class Model
 	protected static string $suffix;
 
 	/**
+	 * Model constructor.
+	 */
+	public function __construct()
+	{
+		$this->add_hooks();
+	}
+
+	/**
 	 * Returns post type slug.
 	 *
 	 * @return string
